@@ -1,4 +1,4 @@
-# Capstone DevSecOps Project
+# DevSecOps Project
 
 [![CI Pipeline](https://github.com/worktemp-coder/project1/actions/workflows/ci.yml/badge.svg)](https://github.com/worktemp-coder/project1/actions/workflows/ci.yml)
 
