@@ -4,6 +4,7 @@ import os
 import hmac
 import logging
 import sqlite3
+import tempfile
 from flask import Flask, request, jsonify
 
 logging.basicConfig(
@@ -14,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-DB_PATH = os.environ.get('USERS_DB', '/tmp/users.db')
+DB_PATH = os.environ.get('USERS_DB', os.path.join(tempfile.gettempdir(), 'users.db'))
 
 
 def init_db():
