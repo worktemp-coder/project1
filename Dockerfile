@@ -10,7 +10,8 @@ WORKDIR /app
 COPY --from=builder /install /usr/local
 COPY src/app.py .
 COPY requirements.txt .
-RUN addgroup -S appgroup && \
+RUN apk upgrade --no-cache && \
+    addgroup -S appgroup && \
     adduser -S appuser -G appgroup && \
     chown -R appuser:appgroup /app
 USER appuser
